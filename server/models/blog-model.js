@@ -10,10 +10,12 @@ const blogSchema = new mongoose.Schema(
       type: String,
       required: [true, "Category is required"],
     },
-    headerImg: {
-      type: String,
-      required: [true, "Header image is required"],
-    },
+    headerImg: [
+      {
+        url: { type: String, required: true },
+        public_id: { type: String, required: true },
+      },
+    ],
     content: {
       type: String,
       required: [true, "Content is required"],
