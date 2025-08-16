@@ -16,7 +16,7 @@ const blogSchema = new mongoose.Schema(
     },
     content: {
       type: String,
-      require: [true, "Content is required"],
+      required: [true, "Content is required"],
     },
     likes: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
     timeToRead: {
