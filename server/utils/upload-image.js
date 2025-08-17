@@ -9,7 +9,7 @@ const uploadImageToCloudinary = (fileBuffer) => {
         else resolve(uploaded);
       }
     );
-    stream.end(fileBuffer);
+    stream.end(fileBuffer.buffer);
   });
 };
 
