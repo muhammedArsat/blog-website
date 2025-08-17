@@ -4,6 +4,7 @@ import morgan from "morgan";
 import authRouter from "./routes/auth-routes.js";
 import blogRouter from "./routes/blog-routes.js";
 import commentRouter from "./routes/comment-routes.js";
+import userRouter from "./routes/user-routes.js";
 import cookieParser from "cookie-parser";
 import passport from "passport";
 import "./configs/passport.js";
@@ -24,6 +25,7 @@ app.use(cookieParser());
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/blogs", blogRouter);
 app.use("/api/v1/comments", commentRouter);
+app.use("/api/v1/users", userRouter);
 app.use(errorHandler);
 
 export default app;
