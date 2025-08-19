@@ -10,18 +10,18 @@ const Navbar = () => {
     setIsMobileNavOpen(!isMobileNavOpen);
   };
 
-  useEffect(() => {
-    if (isMobileNavOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+  // useEffect(() => {
+  //   if (isMobileNavOpen) {
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = "auto";
+  //   }
 
-    return () => {
-      setIsMobileNavOpen(false);
-      document.body.style.overflow = "auto";
-    };
-  }, [isMobileNavOpen]);
+  //   return () => {
+  //     setIsMobileNavOpen(false);
+  //     document.body.style.overflow = "auto";
+  //   };
+  // }, [isMobileNavOpen]);
   return (
     <div className="flex justify-between items-center py-4 px-8">
       <span className="block md:hidden basis-1/4" onClick={handleClose}>
