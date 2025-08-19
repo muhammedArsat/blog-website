@@ -10,3 +10,10 @@ body.dark {
   background-color: #121212;
   color: #f9fafb;
 }
+
+
+@layer{
+  .input-base{
+    @apply bg-transparent border border-gray-500
+  }
+}
