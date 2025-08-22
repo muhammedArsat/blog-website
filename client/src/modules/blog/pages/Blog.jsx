@@ -8,7 +8,7 @@ const Blog = () => {
   const [search, setSearch] = useState("");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   return (
-    <div className="relative">
+    <div className="relative mt-28">
       <Header />
       <Trending />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center md:px-20 gap-3 px-3">

@@ -11,9 +11,8 @@ body.dark {
   color: #f9fafb;
 }
 
-
-@layer{
-  .input-base{
-    @apply bg-transparent border border-gray-500
+@layer base {
+  .input-base {
+    @apply border border-gray-400 px-10 py-2 rounded-lg outline-none bg-transparent;
   }
 }

@@ -3,27 +3,26 @@ import { Menu, X, Twitter, Facebook } from "lucide-react";
 import Theme from "./Theme";
 import Search from "./Search";
 import Auth from "./Auth";
-
+import ProfileFallback from "../../assets/profile_fallback.svg";
 const Navbar = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const handleClose = () => {
     setIsMobileNavOpen(!isMobileNavOpen);
   };
 
-  // useEffect(() => {
-  //   if (isMobileNavOpen) {
-  //     document.body.style.overflow = "hidden";
-  //   } else {
-  //     document.body.style.overflow = "auto";
-  //   }
+  useEffect(() => {
+    if (isMobileNavOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
 
-  //   return () => {
-  //     setIsMobileNavOpen(false);
-  //     document.body.style.overflow = "auto";
-  //   };
-  // }, [isMobileNavOpen]);
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isMobileNavOpen]);
   return (
-    <div className="flex justify-between items-center py-4 px-8">
+    <div className="flex justify-between items-center py-4 px-8 fixed w-full bg-white/70 backdrop-blur-sm dark:bg-black/70 z-40 border-b dark:border-b-gray-700">
       <span className="block md:hidden basis-1/4" onClick={handleClose}>
         <Menu strokeWidth={1.5} />
       </span>
@@ -43,24 +42,33 @@ const Navbar = () => {
         <div className="hidden  md:flex md:justify-center md:items-center gap-3  p-1">
           <Theme />
           <Auth />
+          <img
+            src={ProfileFallback}
+            alt="profile_logo"
+            className="w-9 h-9 cursor-pointer"
+          />
         </div>
       </div>
 
       {/* mobile ul  */}
       <ul
-        className={` justify-center items-center gap-6 font-body text-lg font-semibold md:hidden absolute left-0 w-full bg-white/90 dark:bg-black/90 inset-y-0 backdrop-blur-sm transition-all duration-300 ${
+        className={`  font-body text-lg  flex flex-col font-semibold md:hidden fixed inset-0 p-2 w-full bg-white/90 min-h-dvh dark:bg-black/90  backdrop-blur-sm z-50 transition-all duration-300  ${
           !isMobileNavOpen ? "-translate-x-[100%]" : "translate-x-0"
         }`}
       >
-        <div className="flex justify-between items-center px-3">
+        <div className="flex justify-between items-center px-1">
           <h1 className="text-3xl font-heading mb-4 ">Inkspire</h1>
           <span className="cursor-pointer" onClick={handleClose}>
             <X strokeWidth={1.5} />
           </span>
         </div>
-        <li className="cursor-pointer p-3 text-[18px]">Home</li>
-        <li className="cursor-pointer p-3 text-[18px]">About</li>
-        <li className="cursor-pointer p-3 text-[18px]">Contact</li>
+        <div className="flex-grow">
+          <li className="cursor-pointer p-3 text-[18px]">Home</li>
+          <li className="cursor-pointer p-3 text-[18px]">About</li>
+          <li className="cursor-pointer p-3 text-[18px]">Contact</li>
+          <li className="cursor-pointer p-3 text-[18px]">Post</li>
+        </div>
+
         <div className="flex  justify-between items-center absolute bottom-0 w-full border-t p-2">
           <div className="flex gap-3">
             <span className="bg-light-card dark:bg-dark-card rounded-full p-2">
