@@ -25,7 +25,7 @@ const SearchModal = ({ handleSearch }) => {
       </div>
       <div className="flex justify-center flex-wrap gap-4">
         {trendingTopics.map((topic, _idx) => {
-          return <h1 className=" bg-white dark:bg-dark-card rounded-lg p-2 shadow-lg uppercase text-sm font-medium cursor-pointer ">{topic.trending}</h1>;
+          return <h1 className=" bg-white dark:bg-dark-card rounded-lg p-2 shadow-lg uppercase text-sm font-medium cursor-pointer " key={_idx}>{topic.trending}</h1>;
         })}
       </div>
     </div>
