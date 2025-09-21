@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import logger from "../log/logger.log.js";
 
-interface CustomError extends Error {
+export interface CustomError extends Error {
   statusCode?: number;
 }
 export const errorMiddleware = (
