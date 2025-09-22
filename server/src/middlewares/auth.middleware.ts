@@ -20,7 +20,7 @@ export const requireAuth = (req:AuthenticatedRequest, res:Response, next:NextFun
             error.statusCode = 500;
             throw error;
         }
-        const decode = jwt.verify(token, SECRET_KEY) as JwtPayload;
+        const decode = jwt.verify(token, SECRET_KEY) ;
         req.user = decode;
         next();
     }catch(err:any){

@@ -16,13 +16,13 @@ cloudinary.config({
   api_secret: CLOUDINARY_API_SECRET,
 });
 
-export const uploadImage = async (buffer: Buffer, mimetype:string) => {
+export const uploadImage = async (buffer: Buffer, mimetype: string) => {
   try {
     const base64 = buffer.toString("base64");
     const dataUri = `data:${mimetype};base64,${base64}`;
     const result = await cloudinary.uploader.upload(dataUri, {
       folder: "blog-website",
-      quality:'auto:good'
+      quality: "auto:good",
     });
     return { public_id: result.public_id, url: result.url };
   } catch (err) {
@@ -31,3 +31,5 @@ export const uploadImage = async (buffer: Buffer, mimetype:string) => {
     throw error;
   }
 };
+
+export default cloudinary;

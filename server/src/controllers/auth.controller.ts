@@ -5,9 +5,12 @@ import { CustomError } from "../middlewares/error.middleware.js";
 import { uploadImage } from "../configs/cloudinary.config.js";
 import { generateJwtToken } from "../utils/helper.util.js";
 import { NODE_ENV } from "../configs/Env.js";
-import { profile } from "console";
-import { token } from "morgan";
 
+
+
+interface AuthorizedHeader extends Request{
+  user?:any
+}
 //@desc create a new user
 //@route POST /api/v1/auth/register
 //@access PUBLIC
@@ -112,6 +115,22 @@ export const userLogin = async (
     next(err);
   }
 };
+
+//@desc details of the logged user
+//@route GET /api/v1/auth/profile
+//@access PROTECTED
+export const userProfile = (req:AuthorizedHeader, res:Response)=>{
+    const user = req.user;
+    return res.status(200).json({
+      success:true,
+      message:"Profile fetched successfully",
+      name:user.name,
+      email:user.email,
+      avatar:user.avatar,
+     
+    })
+}
+
 
 //@desc logout a user
 //@route POST /api/v1/auth/logout
