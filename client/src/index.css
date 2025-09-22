@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-primary: "Space Grotesk", sans-serif;
+}
+
+h1 {
+  @apply font-primary font-bold text-[44px] leading-[44px] tracking-tighter;
+}
+
+h2 {
+  @apply font-primary font-semibold text-[38px] leading-[38px] tracking-tight;
+}
+
+h3 {
+  @apply font-primary font-normal text-[18px] leading-[18px] tracking-wider;
+}
+
+p {
+  @apply font-primary font-normal text-[18px] leading-[18px] tracking-wider text-neutral-600;
+}
+li {
+  @apply font-primary font-normal text-[18px] leading-[18px]  text-neutral-700;
+}
+
+
+@layer base{
+  .input-base{
+    @apply border px-11 py-3 rounded-lg border-neutral-200 font-primary w-full outline-violet-600
+  }
+}
