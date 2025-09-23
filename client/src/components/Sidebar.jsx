@@ -12,7 +12,7 @@ const Sidebar = () => {
     <div
       className={`${
         isSidebarVisible ? "translate-x-0" : "-translate-x-full"
-      } z-50 bg-white fixed transition-all duration-300  w-[200px] border-r border-neutral-200 min-h-screen`}
+      } z-50 md:translate-x-0 bg-white fixed transition-all top-18 duration-300  w-[200px] border-r border-neutral-200 min-h-screen`}
       
     >
       <ul className="flex flex-col space-y-4 pt-4">
