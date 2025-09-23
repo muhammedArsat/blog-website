@@ -1,11 +1,14 @@
 import React from "react";
 import Routepath from "./routes/Routepath";
+import Header from "./components/Header";
+import SidebarProvider from "./providers/SidebarProvider";
 
 const App = () => {
   return (
-    <div>
+    <SidebarProvider>
+      
       <Routepath />
-    </div>
+    </SidebarProvider>
   );
 };
 
