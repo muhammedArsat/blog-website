@@ -10,6 +10,7 @@ import History from "../pages/History";
 import Write from "../pages/Write";
 import Header from "../components/Header";
 import Headerlayout from "../layouts/Headerlayout";
+import Blog from "../pages/Blog";
 
 const Routepath = () => {
   return (
@@ -24,6 +25,7 @@ const Routepath = () => {
             <Route path="/library" element={<Library />} />
             <Route path="/history" element={<History />} />
             <Route path="/write" element={<Write />} />
+            <Route path="/blog" element={<Blog />} />
           </Route>
         </Route>
       </Routes>

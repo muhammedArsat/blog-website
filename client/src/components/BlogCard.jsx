@@ -1,7 +1,7 @@
 import React from "react";
 import { MessageCircle, BookmarkCheckIcon, Trash } from "lucide-react";
-import BlogImg from '../assets/icon-blog.webp'
-const BlogCard = ({isHistory}) => {
+import BlogImg from "../assets/icon-blog.webp";
+const BlogCard = ({ isHistory }) => {
   return (
     <div className="flex justify-center items-start  md:items-center space-x-4 border-b border-neutral-200 p-2">
       <div className="flex flex-col space-y-4 basis-3/4">
@@ -21,16 +21,22 @@ const BlogCard = ({isHistory}) => {
 
           <div className="flex flex-row-reverse gap-1 md:gap-4">
             <span className="cursor-pointer">
-              <BookmarkCheckIcon strokeWidth={1}/>
+              <BookmarkCheckIcon strokeWidth={1} />
             </span>
-            <span className={`${isHistory ? 'block':'hidden'} cursor-pointer` }>
-              <Trash strokeWidth={1} color="red"/>
+            <span
+              className={`${isHistory ? "block" : "hidden"} cursor-pointer`}
+            >
+              <Trash strokeWidth={1} color="red" />
             </span>
           </div>
         </div>
       </div>
       <div className="basis-1/4 ">
-        <img src={BlogImg} alt="blog image" className="object-contain rounded-sm md:w-60" />
+        <img
+          src={BlogImg}
+          alt="blog image"
+          className="object-contain rounded-sm md:w-60"
+        />
       </div>
     </div>
   );
