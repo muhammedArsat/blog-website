@@ -8,7 +8,7 @@ const Login = () => {
   return (
     <div className="flex items-center min-h-screen">
       <div className="basis-7/12 relative md:flex md:flex-col space-y-4  pt-24 bg-violet-600 rounded-r-lg min-h-screen hidden justify-center items-center">
-        <h3 className="text-white absolute  top-3 left-3">Blogsphere</h3>
+        <h4 className="text-white text-xl absolute font-primary font-bold top-3 left-3">Blogsphere</h4>
         <h4 className=" absolute top-9 left-3 font-primary tracking-wide text-slate-200">
           Read. Write. Inspire.
         </h4>

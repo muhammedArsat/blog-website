@@ -5,8 +5,7 @@ import SidebarProvider from "./providers/SidebarProvider";
 
 const App = () => {
   return (
-    <SidebarProvider>
-      
+    <SidebarProvider>  
       <Routepath />
     </SidebarProvider>
   );

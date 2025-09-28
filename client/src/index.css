@@ -32,4 +32,17 @@ li {
   .input-base{
     @apply border px-11 py-3 rounded-lg border-neutral-200 font-primary w-full outline-violet-600
   }
+   .heading_input{
+    @apply border px-14 py-3 rounded-lg font-primary w-full outline-none border-none text-3xl
+  }
+}
+
+.editor-wrapper {
+  padding-left: 1px; /* default for desktop */
+}
+
+@media (max-width: 768px) {
+  .editor-wrapper {
+    padding-left: 4px; /* reduce padding on mobile */
+  }
 }

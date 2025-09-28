@@ -31,7 +31,7 @@ const Header = () => {
 }, [isProfileModelShow]);
 
   return (
-    <div className="border-b backdrop-blur-xl  fixed w-full z-50 bg-white/10 border-neutral-200 py-2 px-4 flex justify-between">
+    <div className="border-b bg-white fixed w-full z-50  border-neutral-200 py-2 px-4 flex justify-between">
       <div className="flex justify-center items-center space-x-4">
         <span className="cursor-pointer block md:hidden" onClick={handleSidebarVisible}>
           <Menu strokeWidth={1} />
