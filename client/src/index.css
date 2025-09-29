@@ -19,6 +19,9 @@ h2 {
 h3 {
   @apply font-primary font-normal text-[14px] md:text-[18px] text-neutral-500 leading-[18px] tracking-wider;
 }
+h4 {
+  @apply font-primary font-normal text-[18px]  leading-[18px] tracking-wider;
+}
 
 p {
   @apply font-primary font-normal text-[14px] md:text-[18px] leading-[18px] tracking-wider text-neutral-600;
